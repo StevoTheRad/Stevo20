@@ -8,10 +8,10 @@ public class SQRServiceTest {
 
     @ParameterizedTest
     @CsvFileSource(files = "src/test/resources/borders.csv")
-    public void testValueLimits(int expected, int a, int b) {
+    public void testValueLimits(int expected, int bottomBound, int upperBound) {
         SQRService service = new SQRService();
 
-        int actual = service.calcSqrt(a, b, 99, 0);
+        int actual = service.calcSqrt(bottomBound, upperBound, 99, 0);
 
         Assertions.assertEquals(expected, actual);
     }
