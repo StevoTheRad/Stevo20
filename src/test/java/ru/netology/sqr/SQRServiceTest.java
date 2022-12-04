@@ -11,7 +11,7 @@ public class SQRServiceTest {
     public void testValueLimits(int expected, int bottomBound, int upperBound) {
         SQRService service = new SQRService();
 
-        int actual = service.calcSqrt(bottomBound, upperBound, 99, 0);
+        int actual = service.calcSqrt(bottomBound, upperBound);
 
         Assertions.assertEquals(expected, actual);
     }
